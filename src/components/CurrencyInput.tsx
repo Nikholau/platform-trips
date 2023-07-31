@@ -13,9 +13,9 @@ function CurrencyInput({
   ...props
 }: InputProps) {
   const inputClassName = twMerge(
-    className,
-    "rounded-lg border border-gray-300 bg-white p-2 text-sm font-normal text-dark placeholder-black placeholder-opacity-20 outline-none transition-all focus:ring-1 focus:ring-primary",
-    error ? "border-red-500" : ""
+    "rounded-lg border border-gray-300 bg-white p-2 text-sm font-normal text-primaryDarker placeholder-black placeholder-opacity-20 outline-none transition-all focus:ring-1 focus:ring-primary",
+    error ? "border-red-500" : "",
+    className
   );
 
   return (
@@ -27,7 +27,7 @@ function CurrencyInput({
         {...props}
       />
       {error && errorMessage && (
-        <div className="mt-1 text-xs text-red-500">{errorMessage}</div>
+        <div className="text-red-500 mt-1 text-xs">{errorMessage}</div>
       )}
     </div>
   );
